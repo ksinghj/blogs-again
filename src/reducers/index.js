@@ -1,12 +1,15 @@
 import { combineReducers } from "redux";
+import "../actions";
+
+export const postsReducer = (state = [], action) => {
+  switch (action.type) {
+    case "FETCH_POSTS":
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
 
 export default combineReducers({
-  postsReducer: (state = null, action) => {
-    switch (action.type) {
-      case "FETCH_POSTS":
-        return action.payload;
-      default:
-        return state;
-    }
-  },
+  posts: postsReducer,
 });
