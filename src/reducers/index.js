@@ -13,7 +13,7 @@ export const postsReducer = (state = [], action) => {
 export const userReducer = (state = [], action) => {
   switch (action.type) {
     case "FETCH_USER":
-      return action.payload.data;
+      return [...state, action.payload];
     default:
       return state;
   }

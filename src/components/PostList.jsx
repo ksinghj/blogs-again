@@ -7,7 +7,6 @@ import { fetchUser } from "../actions";
 class PostList extends React.Component {
   componentDidMount() {
     this.props.fetchPosts(); // can return a function thanks to thunk
-    this.props.fetchUser();
   }
 
   renderList() {
