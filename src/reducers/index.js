@@ -21,5 +21,5 @@ export const userReducer = (state = [], action) => {
 
 export default combineReducers({
   posts: postsReducer,
-  user: userReducer,
+  users: userReducer,
 });
