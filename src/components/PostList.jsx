@@ -20,6 +20,10 @@ class PostList extends React.Component {
               <h2>{post.title}</h2>
               <p>{post.body}</p>
             </div>
+            {/* 
+             Here ownProps is post.userId
+             (ownProps in UserHeader mapState) v
+          */}
             <UserHeader userId={post.userId} />
           </div>
         </div>
